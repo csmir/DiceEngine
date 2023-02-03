@@ -84,9 +84,7 @@ namespace DiceEngine
     /// </summary>
     public static partial class FormulaExtensions
     {
-#pragma warning disable SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
-        private readonly static Regex _regex = new(@"^[\dd()+\-*/^%]*$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-#pragma warning restore SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
+        private readonly static Regex _regex = MyRegex();
 
         /// <summary>
         ///     Checks if the formula is a valid calculation input.
@@ -95,5 +93,8 @@ namespace DiceEngine
         /// <returns></returns>
         public static bool IsValidCalculation(this string v)
             => _regex.IsMatch(v);
+
+        [GeneratedRegex("^[\\dd()+\\-*/^%]*$", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
+        private static partial Regex MyRegex();
     }
 }
