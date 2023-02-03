@@ -4,9 +4,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DiceEngine.Calculation.Operations;
+using DiceEngine.Operations;
 
-namespace DiceEngine.Calculation.Elements
+namespace DiceEngine.Elements
 {
     /// <summary>
     ///     

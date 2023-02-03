@@ -1,4 +1,4 @@
-﻿namespace DiceEngine.Calculation.Elements
+﻿namespace DiceEngine.Operations
 {
     /// <summary>
     ///     

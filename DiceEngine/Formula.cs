@@ -1,4 +1,5 @@
-﻿using DiceEngine.Calculation.Elements;
+﻿using DiceEngine.Elements;
+using DiceEngine.Operations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace DiceEngine.Calculation
+namespace DiceEngine
 {
     /// <summary>
     ///     Represents a calculation formula for dice mathematics.
@@ -83,7 +84,9 @@ namespace DiceEngine.Calculation
     /// </summary>
     public static partial class FormulaExtensions
     {
-        private readonly static Regex _regex = MyRegex();
+#pragma warning disable SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
+        private readonly static Regex _regex = new(@"^[\dd()+\-*/^%]*$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+#pragma warning restore SYSLIB1045 // Convert to 'GeneratedRegexAttribute'.
 
         /// <summary>
         ///     Checks if the formula is a valid calculation input.
@@ -92,8 +95,5 @@ namespace DiceEngine.Calculation
         /// <returns></returns>
         public static bool IsValidCalculation(this string v)
             => _regex.IsMatch(v);
-
-        [GeneratedRegex("^[\\dd()+\\-*/^%]*$", RegexOptions.IgnoreCase | RegexOptions.Compiled, "en-US")]
-        private static partial Regex MyRegex();
     }
 }

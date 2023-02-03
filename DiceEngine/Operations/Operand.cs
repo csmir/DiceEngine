@@ -1,11 +1,11 @@
-﻿using DiceEngine.Calculation.Elements;
+﻿using DiceEngine.Elements;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiceEngine.Calculation.Operations
+namespace DiceEngine.Operations
 {
     /// <summary>
     ///     

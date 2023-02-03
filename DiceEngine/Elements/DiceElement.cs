@@ -1,4 +1,4 @@
-﻿using DiceEngine.Calculation.Operations;
+﻿using DiceEngine.Operations;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace DiceEngine.Calculation.Elements
+namespace DiceEngine.Elements
 {
     /// <summary>
     ///     

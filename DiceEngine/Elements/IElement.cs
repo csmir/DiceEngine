@@ -1,8 +1,8 @@
-﻿using DiceEngine.Calculation.Operations;
+﻿using DiceEngine.Operations;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DiceEngine.Calculation.Elements
+namespace DiceEngine.Elements
 {
     /// <summary>
     ///     An element in a formula.

@@ -1,4 +1,4 @@
-﻿using DiceEngine.Calculation;
+﻿using DiceEngine;
 
 while (true)
 {
