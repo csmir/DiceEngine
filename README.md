@@ -5,7 +5,7 @@ This is a mathematical engine that can calculate dice rolls alongside normal cal
 ## Usage
 
 ```cs
-using DiceEngine.Calculation;
+using DiceEngine;
 
 while (true)
 {
