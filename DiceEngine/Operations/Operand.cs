@@ -8,45 +8,48 @@ using System.Threading.Tasks;
 namespace DiceEngine.Operations
 {
     /// <summary>
-    ///     
+    ///     Represents the operand applied to the value.
     /// </summary>
     public enum Operand
     {
         /// <summary>
-        ///     
+        ///     Exponent.
         /// </summary>
         Exp = 1,
 
         /// <summary>
-        ///     
+        ///     Multiplication.
         /// </summary>
         Mul = 2,
 
         /// <summary>
-        ///     
+        ///     Division.
         /// </summary>
         Div = 3,
 
         /// <summary>
-        ///     
+        ///     Remainder Division.
         /// </summary>
         Rem = 4,
 
         /// <summary>
-        ///     
+        ///     Addition.
         /// </summary>
         Add = 5,
 
         /// <summary>
-        ///     
+        ///     Subtraction.
         /// </summary>
         Sub = 6,
     }
 
-    public static class ValueOperandExtensions
+    /// <summary>
+    ///     Represents extensions for operands.
+    /// </summary>
+    public static class OperandExtensions
     {
         /// <summary>
-        ///     
+        ///     Calculates the values from an operand.
         /// </summary>
         /// <param name="op"></param>
         /// <param name="a"></param>
@@ -78,7 +81,7 @@ namespace DiceEngine.Operations
             };
 
         /// <summary>
-        ///     
+        ///     Tries to determine the operand in the first occurrence of this string.
         /// </summary>
         /// <param name="v"></param>
         /// <param name="op"></param>
@@ -116,7 +119,7 @@ namespace DiceEngine.Operations
         }
 
         /// <summary>
-        ///     
+        ///     Tries to find the next operator in the current string.
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -139,7 +142,7 @@ namespace DiceEngine.Operations
         }
 
         /// <summary>
-        ///     
+        ///     Tries to determine the operand from provided character.
         /// </summary>
         /// <param name="v"></param>
         /// <param name="op"></param>
